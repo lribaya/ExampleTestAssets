@@ -6,11 +6,6 @@ pool:
   vmImage: 'Default' # Use an appropriate agent here
 
 steps:
-- task: DownloadPipelineArtifact@2 # If you want to use artifacts from a previous stage
-  inputs:
-    buildType: 'current'
-    artifactName: 'drop'
-    targetPath: '$(System.ArtifactsDirectory)'
 
 - script: |
     # Commands to execute your executable file
