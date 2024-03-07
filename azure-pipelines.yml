@@ -23,7 +23,7 @@ steps:
   displayName: 'Execute soatestcli twice'
 
 - script: |
-    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\Parabank_OpenAI_Test_Scenarios.tst" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\helloWorld.tst" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
 
   displayName: 'Execute soatestcli thrice'
 
