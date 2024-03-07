@@ -18,7 +18,7 @@ steps:
   displayName: 'Execute soatestcli once'
 
 - script: |
-    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\helloWorld.tst" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\reproduction_April_Assertor.tst" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
 
   displayName: 'Execute soatestcli twice'
 
