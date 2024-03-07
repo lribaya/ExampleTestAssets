@@ -33,5 +33,7 @@ steps:
       **/rep*.xml
       **/rep*.sarif
       **/coverage.xml
+    mergeTestResults: true
+    publishRunAttachments: false
 
 
