@@ -9,7 +9,7 @@ steps:
 - checkout: self
 
 - script: |
-    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "$(System.DefaultWorkingDirectory)\workspace" -import "$(Build.SourceDirectory)"
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "$(System.DefaultWorkingDirectory)\workspace" -import "$(System.DefaultWorkingDirectory)"
     
     "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "$(System.DefaultWorkingDirectory)\workspace" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
 
