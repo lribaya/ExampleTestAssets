@@ -1,8 +1,8 @@
 trigger:
-  - main
+  - master
 
 pool:
-  vmImage: 'ubuntu-latest' # Use an appropriate agent here
+  vmImage: 'Default' # Use an appropriate agent here
 
 steps:
 - task: DownloadPipelineArtifact@2 # If you want to use artifacts from a previous stage
@@ -14,7 +14,7 @@ steps:
 - script: |
     # Commands to execute your executable file
     # Example: ./path/to/your/executable.exe
-  displayName: 'Execute Executable'
     C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe -version
-- checkout: self
-- checkout: git@github.com:lribaya/ExampleTestAssets.git
+  displayName: 'Execute Executable'
+    
+
