@@ -8,7 +8,7 @@ pool:
 steps:
 
 - script: |
-    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\Users\lribaya\parasoft\soavirt_workspace_20231" -config "soatest.user://Example Configuration"
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "$(Build.SourceDirectory)\workspace" import "C:\Users\lribaya\parasoft\soavirt_workspace_20232\TestAssets"
   displayName: 'Execute soatestcli'
 
 
