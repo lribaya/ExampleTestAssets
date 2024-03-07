@@ -10,8 +10,8 @@ steps:
 - checkout: self
 
 - script: |
-    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -import "C:\Users\lribaya\parasoft\soavirt_workspace_20232\TestAssets" -data "$(Build.SourceDirectory)\workspace"
-    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "$(Build.SourceDirectory)\workspace" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -import "$(Build.SourceDirectory)\TestAssets" -data "$(System.DefaultWorkingDirectory)\workspace"
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "$(System.DefaultWorkingDirectory)\workspace" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
 
   displayName: 'Execute soatestcli'
 
