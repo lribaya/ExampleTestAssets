@@ -9,7 +9,7 @@ steps:
 
 - script: |
     "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "$(Build.SourceDirectory)\workspace" -import "C:\Users\lribaya\parasoft\soavirt_workspace_20232\TestAssets"
-    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "$(Build.SourceDirectory)\workspace" -resource "\TestAssets\helloWorld.tst" -config "soatest.user://Example Configuration"
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "$(Build.SourceDirectory)\workspace" -resource "\TestAssets\" -config "soatest.user://Example Configuration"
   displayName: 'Execute soatestcli'
 
 
