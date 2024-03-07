@@ -15,7 +15,17 @@ steps:
 - script: |
     "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\helloWorld.tst" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
 
-  displayName: 'Execute soatestcli tst'
+  displayName: 'Execute soatestcli once'
+
+- script: |
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\End2EndSOAP.tst" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
+
+  displayName: 'Execute soatestcli twice'
+
+- script: |
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\Parabank_OpenAI_Test_Scenarios.tst" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
+
+  displayName: 'Execute soatestcli thrice'
 
 - task: PublishParasoftResults@1
   inputs:
