@@ -10,7 +10,7 @@ steps:
 - script: |
     # Commands to execute your executable file
     # Example: ./path/to/your/executable.exe
-    C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe -version
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -version
   displayName: 'Execute Executable'
     
 
