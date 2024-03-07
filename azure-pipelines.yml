@@ -10,8 +10,12 @@ steps:
 
 - script: |
     "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "$(System.DefaultWorkingDirectory)\workspace" -import "$(System.DefaultWorkingDirectory)"
-    
-  displayName: 'Execute soatestcli'
+  displayName: 'Execute soatestcli import'
+
+- script: |
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "$(System.DefaultWorkingDirectory)\workspace" -resource "\TestAssets\helloWorld.tst" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
+
+  displayName: 'Execute soatestcli tst'
 
 - task: PublishParasoftResults@1
   inputs:
