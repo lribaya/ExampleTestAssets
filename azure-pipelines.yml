@@ -2,6 +2,7 @@ trigger:
   - master
 
 pool:
+  name: 'Default' # Specify the name of your agent pool here
   vmImage: 'Default' # Use an appropriate agent here
 
 steps:
