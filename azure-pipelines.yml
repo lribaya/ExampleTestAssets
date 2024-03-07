@@ -18,14 +18,9 @@ steps:
   displayName: 'Execute soatestcli once'
 
 - script: |
-    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\End2EndSOAP.tst" -config "soatest.user://Example Configuration" 
-
-  displayName: 'Execute soatestcli twice'
-
-- script: |
     "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\helloWorld.tst" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
 
-  displayName: 'Execute soatestcli thrice'
+  displayName: 'Execute soatestcli twice'
 
 - task: PublishParasoftResults@1
   inputs:
@@ -33,7 +28,5 @@ steps:
       **/rep*.xml
       **/rep*.sarif
       **/coverage.xml
-    mergeTestResults: true
-    publishRunAttachments: false
 
 
