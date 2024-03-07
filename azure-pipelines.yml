@@ -1,0 +1,20 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest' # Use an appropriate agent here
+
+steps:
+- task: DownloadPipelineArtifact@2 # If you want to use artifacts from a previous stage
+  inputs:
+    buildType: 'current'
+    artifactName: 'drop'
+    targetPath: '$(System.ArtifactsDirectory)'
+
+- script: |
+    # Commands to execute your executable file
+    # Example: ./path/to/your/executable.exe
+  displayName: 'Execute Executable'
+    C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe -version
+- checkout: self
+- checkout: git@github.com:lribaya/ExampleTestAssets.git
