@@ -13,12 +13,12 @@ steps:
   displayName: 'Execute soatestcli import'
 
 - script: |
-    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\helloWorld.tst" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\helloWorld.tst" -config "soatest.user://Example Configuration" 
 
   displayName: 'Execute soatestcli once'
 
 - script: |
-    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\End2EndSOAP.tst" -config "soatest.user://Example Configuration" -report "$(System.DefaultWorkingDirectory)"
+    "C:\Program Files\Parasoft\SOAtest & Virtualize\2023.2\soatestcli.exe" -data "C:\workspace" -resource "\TestAssets\End2EndSOAP.tst" -config "soatest.user://Example Configuration" 
 
   displayName: 'Execute soatestcli twice'
 
