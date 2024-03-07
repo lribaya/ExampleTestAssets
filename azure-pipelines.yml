@@ -22,3 +22,11 @@ steps:
 
   displayName: 'Execute soatestcli twice'
 
+- task: PublishParasoftResults@1
+  inputs:
+    resultsFiles: |
+      **/rep*.xml
+      **/rep*.sarif
+      **/coverage.xml
+    mergeTestResults: true
+    publishRunAttachments: false
